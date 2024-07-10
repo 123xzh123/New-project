@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./img/web.png" />
+  <title>仿中国国家图书馆</title>
+  <script src="./js/angular.js"></script>
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body ng-app="demo">
+  <!-- 头部导航栏开始 -->
+  <header>
+    <div class="logo">
+      <a href="https://www.nlc.cn/web/index.shtml"><img src="./img/logo.png" alt="" /></a>
+      <hr style="margin-top: 10px" />
+      <div class="text">
+        <a href="#">登录</a>
+        <span>|</span>
+        <a href="#">无障碍</a>
+        <span>|</span>
+        <a href="#">English</a>
+      </div>
+    </div>
+
+    <!-- nav滑块开始区域 -->
+    <div class="nav">
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯信息</a></li>
+        <li><a href="#">读者指南</a></li>
+        <li><a href="#">资讯服务</a></li>
+        <li><a href="#">业界服务</a></li>
+        <li><a href="#">重点项目</a></li>
+        <div class="nav-box"></div>
+      </ul>
+    </div>
+    <!-- nav滑块结束区域 -->
+
+    <!-- 搜索框开始 -->
+    <div class="container">
+      <div class="search-container">
+        <input type="text" placeholder="请输入您要检索信息" />
+        <button>搜索</button>
+      </div>
+    </div>
+    <div class="up">
+      <img src="./upload/up1.png" alt="" />
+    </div>
+    <!-- 搜索框结束 -->
+  </header>
+  <!-- 轮播图开始 -->
+  <div class="shell" style="margin-left: -40px; width: 70%; margin-left: 50px">
+    <ul class="images">
+      <li class="img"><img src="./img/show1.jpg" /></li>
+      <li class="img"><img src="./img/show2.jpg" /></li>
+      <li class="img"><img src="./img/show3.jpg" /></li>
+      <li class="img"><img src="./img/show4.jpg" /></li>
+      <li class="img"><img src="./img/show5.jpg" /></li>
+    </ul>
+    <ul class="min">
+      <li class="m"></li>
+      <li class="m"></li>
+      <li class="m"></li>
+      <li class="m"></li>
+      <li class="m"></li>
+    </ul>
+    <div class="button">
+      <div class="button-left">&lt;</div>
+      <div class="button-right">&gt;</div>
+    </div>
+  </div>
+  <div class="bg"></div>
+  <!-- 轮播图结束 -->
+
+
+  
+  <!-- wrapper开始 -->
+   <div class="wrapper">
+    <div class="card" style="--delay: -1">
+      <div class="content">
+        <div class="img"><img src="./img/show1.jpg" alt="" /></div>
+        <div class="details">
+          <div ng-controller="code">
+            <span>Alexia</span>
+          </div>
+          <p>Nothing is impossible to a willing heart./Where there is a will there is a way</p>
+        </div>
+      </div>
+      <a href="#">查看</a>
+    </div>
+
+
+    <div class="card" style="--delay: 0">
+      <div class="content">
+        <div class="img"><img src="./img/show2.jpg" alt="" /></div>
+        <div class="details">
+          <span class="name">Amanda</span>
+          <p>The longest journey begins with the first step</p>
+        </div>
+      </div>
+      <a href="#">查看</a>
+    </div>
+ 
+
+    <div class="card" style="--delay: -1">
+      <div class="content">
+        <div class="img"><img src="./img/show3.jpg" alt="" /></div>
+        <div class="details">
+          <span class="name">Ada</span>
+          <p>Lost years are worse than lost dollars.</p>
+        </div>
+      </div>
+      <a href="#">查看</a>
+    </div>
+
+
+  </div> 
+  <!-- wrapper结束 -->
+  <!-- main开始 -->
+  <hr style="margin-top: 15px" />
+  <img src="./upload/up2.png" style="margin-left: 988px; width: 100px; height: 100px;">
+  <h2>推荐书单</h2>
+  <h3>RECOMMEND</h3>
+  <div class="main" ng-app="demo" ng-controller="MainController">
+    <div class="box">
+        <img src="./img/book1.jpg" />
+        <span>{{title1}}</span>
+      </div>
+      <div class="box">
+        <img src="./img/book2.jpg" />
+        <span>明朝那些事儿</span>
+      </div>
+      <div class="box">
+        <img src="./img/book3.jpg" />
+        <span>素描的诀窍</span>
+      </div>
+      <div class="box">
+        <img src="./img/book4.jpg" />
+        <span>古筝流行金曲99首</span>
+      </div>
+      <div class="box">
+        <img src="./img/book5.jpg" />
+        <span>追风筝的人</span>
+      </div>
+  </div>
+  <div>
+    <img src="./upload/up2.jpg" style="width: 100%; margin-top: 10px;">
+  </div>
+  </img>
+  <!-- main结束 -->
+  <!-- silhouette -->
+  <h2>文化剪影</h2>
+  <h3>Cultural silhouette</h3>
+  <div class="recode">
+    <div class="one">
+      <img class="photo" src="./upload/photo1.jpg" alt="">
+    </div>
+    <div class="two">
+      <img class="photo" src="./upload/photo2.jpg" alt="">
+    </div>
+    <div class="three">
+      <img class="photo" src="./upload/photo3.jpg" alt="">
+    </div>
+    <div class="four">
+      <img class="photo" src="./upload/photo4.jpg" alt="">
+    </div>
+    <div class="five">
+      <img class="photo" src="./upload/photo5.jpg" alt="">
+    </div>
+  </div>
+  <!-- <div ng-app="demo">
+    <div ng-controller="MainController">
+      <table style="border: solid 2px">
+        <tr>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+        </tr>
+        <tr ng-repeat="(key,value) in users">
+          <td>{{key}}</td>
+          <td>{{value.sex}}</td>
+          <td>{{value.age}}</td>
+        </tr>
+      </table>
+    </div>
+  </div> -->
+  </div>
+  </div>
+  <footer>
+    <img src="./img/school.gif" alt="" />
+    <p><a href="https://www.xmist.edu.cn/">地址：中国·福建省·厦门市集美文教区孙坂南路1199号</a></p>
+  </footer>
+  <script>
+    //  var demo = angular.module("demo", []);
+    //       demo.controller("MainController", function ($scope) {
+    //         $scope.users = {
+    //           "张三": { age: 24, sex: "男" },
+    //           "李四": { age: 19, sex: "女" },
+    //           "王五": { age: 25, sex: "男" },
+    //         };
+    //       });
+    var demo = angular.module('demo', []);
+    demo.controller('MainController', function ($scope) {
+      $scope.title1 = '原谅我红尘颠倒'
+    })
+
+    // 轮播图js开始
+    let left = document.querySelector(".button-left");
+    let right = document.querySelector(".button-right");
+    let m = document.querySelectorAll(".m");
+    let images = document.querySelector(".images");
+    let index = 0;
+    let time;
+    function position() {
+      images.style.left = index * -100 + "%";
+    }
+
+    function add() {
+      if (index >= m.length - 1) {
+        index = 0;
+      } else {
+        index++;
+      }
+    }
+    function desc() {
+      if (index < 1) {
+        index = m.length - 1;
+      } else {
+        index--;
+      }
+    }
+    function timer() {
+      time = setInterval(() => {
+        index++;
+        desc();
+        add();
+        position();
+      }, 3000);
+    }
+    left.addEventListener("click", () => {
+      desc();
+      position();
+      clearInterval(time);
+      timer();
+    });
+    right.addEventListener("click", () => {
+      add();
+      position();
+      clearInterval(time);
+      timer();
+    });
+    for (let i = 0; i < m.length; i++) {
+      m[i].addEventListener("click", () => {
+        index = i;
+        position();
+        clearInterval(time);
+        timer();
+      });
+    }
+    timer();
+    // 轮播图js结束
+  </script>
+</body>
+</html>
